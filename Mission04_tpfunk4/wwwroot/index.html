@@ -1,34 +1,46 @@
-﻿<!DOCTYPE html>
+﻿<!-- Edited By Tanner Funk on January 30th-->
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Mission4</title>
+    <title>Practice Web App</title>
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/default.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/tflogo.jpeg">
 </head>
 <body>
-    <h1>Mission 4</h1>
-    <img src="img/pexels-spencer-davis-4400026.jpg" id="pic" />
-    <p>More Stuff</p>
+    <h1>Tanner Funk</h1>
+    <img src="img/jeeping.jpeg" />
+    <p>I want to learn how to develop applications for enterprises! I also want to make lots of money!</p>
     <br />
 
-    <p>Here's a title for a list!</p>
+    <p>Top 3 jobs</p>
     <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
+        <li>1. Frontend Software Engineer</li>
+        <li>2. Backend Software Engineer</li>
+        <li>3. Security Analyst</li>
     </ul>
 
-    <h2>A Form!</h2>
+    <h2>Grade Calculator</h2>
     <form>
-        <label>From:</label>
-        <input id="txtFrom" /><br />
-        <label>Subject:</label>
-        <input id="txtSubject" /><br />
-        <label>Message:</label>
-        <textarea id="txtMessage" rows="4"></textarea>
+        <label>Assignments: </label>
+        <input id="assignments" /><br />
+        <label>Group Project:</label>
+        <input id="projects" /><br />
+        <label>Quizzes:</label>
+        <input id="quizzes" /><br />
+        <label>Midterm Exam:</label>
+        <input id="midterm" /><br />
+        <label>Final Exam:</label>
+        <input id="final" /><br />
+        <label>INTEX:</label>
+        <input id="intex" /><br />
         <br />
-        <input id="btnsend" type="button" value="Send Message" />
+        <input id="btnsend" type="button" value="Calculate" /><br />
+        <label>Student Grade:</label>
+        <span id="letterGrade"></span>
+        <span id="gradeCalculated"></span>
     </form>
 
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
