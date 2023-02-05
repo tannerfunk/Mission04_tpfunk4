@@ -16,13 +16,33 @@ namespace Mission04_tpfunk4
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // THIS WILL ALLOW US TO USE THE CONTROLLERS WITH VIEWS
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDefaultFiles();
+            //THIS WILL HELP US SEE ERRORS
+            if (env.IsEnvironment("Development"))
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+
             app.UseStaticFiles();
+
+            // THIS IS THE ROUTING
+            app.UseRouting();
+
+            // ENDPOINTS (points to the view we built)
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=NewFolder}/{action=Index}/{id?}"
+                );
+            });
         }
     }
 }
