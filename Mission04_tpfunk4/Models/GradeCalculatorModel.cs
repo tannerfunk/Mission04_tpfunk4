@@ -8,23 +8,23 @@ namespace Mission04_tpfunk4.Models
 {
     public class GradeCalculatorModel
     {
-        [Required]
+        //This is the validation in the model.
+        [Range(0, 100)]
         public float Assignments { get; set; }
 
-        [Required]
+        [Range(0, 100)]
         public float Projects { get; set; }
 
-        [Required]
+        [Range(0, 100)]
         public float Quizzes { get; set; }
 
-        [Required]
+        [Range(0, 100)]
         public float Midterm { get; set; }
-
-        [Required]
-        //[Max SOmething!!]
+        
+        [Range(0, 100)]
         public float Final { get; set; }
 
-        [Required]
+        [Range(0, 100)]
         public float Intex { get; set; }
 
     }
